@@ -1,0 +1,4 @@
+Potential search implementation:
+.where with a SQL ILIKE 
+
+before_action :authenticate_user => up to here on guide
