@@ -1,5 +1,10 @@
 source "https://rubygems.org"
 
+# added gems
+
+# Use ActiveModel has_secure_password
+gem 'bcrypt', '~> 3.1.7'
+
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 8.1.2"
 # The modern asset pipeline for Rails [https://github.com/rails/propshaft]
