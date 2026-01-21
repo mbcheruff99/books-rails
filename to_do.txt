@@ -1,0 +1,10 @@
+    IMMEDIATE
+- default admin to false somehow !!!!!
+- tests for crud?
+- genres in schema or tags?
+
+
+    EVENTUALLY
+- uncomment validations for book model
+- uncomment admin only on book controller
+- 

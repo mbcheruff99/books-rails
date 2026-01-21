@@ -1,0 +1,9 @@
+json.id book.id
+json.title book.title
+json.author book.author
+json.published_year book.published_year
+json.description book.description
+json.genres book.genres
+json.cover book.cover
+json.created_at book.created_at
+json.updated_at book.updated_at
