@@ -1,7 +1,8 @@
     IMMEDIATE
-- default admin to false somehow !!!!!
+- require title, aithor in books
+- require email and password in user
 - tests for crud?
-- genres in schema or tags?
+- genres into tags, remove from Book table (slack dump zipfile)
 
 
     EVENTUALLY

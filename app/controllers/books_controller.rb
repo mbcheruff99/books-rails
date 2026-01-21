@@ -1,9 +1,9 @@
 class BooksController < ApplicationController
-  # before_action :authenticate_admin (exclude index and show => go back to notes)
+  before_action :authenticate_admin, except: [ :index, :show ]
 
   def index
     @books = Book.all
-    render :index 
+    render :index
   end
   
   
