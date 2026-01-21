@@ -15,7 +15,13 @@ class ApplicationController < ActionController::Base
 
   def authenticate_user
     unless current_user
-      render json: { message: "Signup ot login to continue." }, status: :unauthorized
+      render json: { message: "Signup or login to continue." }, status: :unauthorized
+    end
+  end
+
+  def authenticate_admin
+    unless current_user && current_user.admin
+      render json: { message: "Access denied. Admin acces only." }
     end
   end
 

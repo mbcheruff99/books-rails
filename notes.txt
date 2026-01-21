@@ -5,6 +5,8 @@ before_action :authenticate_user
 before_action :authenticate_user, except: [:index]
 before_action :authenticate_user, only: [:create, :update, :destroy]
 
+before_action :authenticate_admin, except: [:index, :show, :create]
+
 
 name: test0
 email: test0@gmail
