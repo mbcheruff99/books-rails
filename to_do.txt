@@ -2,7 +2,8 @@
 - require title, aithor in books
 - require email and password in user
 - tests for crud?
-- genres into tags, remove from Book table (slack dump zipfile)
+- genres into tags, remove from Book table (slack dump zipfile) (maybe not and uise search somehow?)
+- add genres into search
 
 
     EVENTUALLY
