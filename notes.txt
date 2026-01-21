@@ -1,11 +1,37 @@
+ADD AND DELETE THEIR OWN SHELVES AND NO ONE ELSE'S???? 
+
 Potential search implementation:
 .where with a SQL ILIKE 
 
+
+
+
+ADD TO CONTROLLERS THAT NEED LOGIN TO ACCESS (add to shelves etc)
 before_action :authenticate_user 
 before_action :authenticate_user, except: [:index]
 before_action :authenticate_user, only: [:create, :update, :destroy]
 
+ADD TO CONTROLLERS THAT NEED ADMIN ACCESS TO DO (add or delete books, view people's bookshelves)
 before_action :authenticate_admin, except: [:index, :show, :create]
+
+TESTS WITH ADMIN AND USER CREDENTIALS?? (pass and fail?)
+
+    def authenticate_user
+      unless current_user
+        render json: { message: "You must be logged in to do that." }, status: :unauthorized
+      end
+    end
+
++   def authenticate_admin
++     unless current_user && current_user.admin
++       render json: { message: "You must be an admin to do that." }, status: :unauthorized
++     end
++   end
+
+  class RecipesController < ApplicationController
+    before_action :authenticate_user, except: [:index, :show]
++   before_action :authenticate_admin, except: [:index, :show, :create]
+
 
 
 name: test0
