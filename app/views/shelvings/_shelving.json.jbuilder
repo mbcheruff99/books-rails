@@ -13,7 +13,7 @@
 
 # app/views/shelvings/_shelving.json.jbuilder
 
-json.id shelving.id
+json.shelving_id shelving.id
 
 json.shelf do
   json.id shelving.shelf.id

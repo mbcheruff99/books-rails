@@ -37,14 +37,10 @@ TESTS WITH ADMIN AND USER CREDENTIALS?? (pass and fail?)
 name: test0
 email: test0@gmail
 password: test0
-Cookie: user_id=eyJfcmFpbHMiOnsibWVzc2FnZSI6Ik1RPT0iLCJleHAiOm51bGwsInB1ciI6ImNvb2tpZS51c2VyX2lkIn19--932d888a276e828c0d38b2709435faa7f196d20c; path=/; secure; httponly; samesite=none
+Cookie: user_id=eyJfcmFpbHMiOnsibWVzc2FnZSI6Ik13PT0iLCJleHAiOm51bGwsInB1ciI6ImNvb2tpZS51c2VyX2lkIn19--6ef0278dbb41ea2ea993482e197860504f263b2f; path=/; secure; httponly; samesite=none
 
 ADMIN 
-name: test1
-email: test1@gmail
-password: test1
-Cookie: user_id=eyJfcmFpbHMiOnsibWVzc2FnZSI6Ik1nPT0iLCJleHAiOm51bGwsInB1ciI6ImNvb2tpZS51c2VyX2lkIn19--2f03944f95a85839bd8e363508627907237daa76; path=/; secure; httponly; samesite=none
-
-
-rails generate migration AddUserIdTo____ user_id:integer
-rails db:migrate
+email: test2@gmail
+password: test2
+Cookie: 
+user_id=eyJfcmFpbHMiOnsibWVzc2FnZSI6Ik1nPT0iLCJleHAiOm51bGwsInB1ciI6ImNvb2tpZS51c2VyX2lkIn19--2f03944f95a85839bd8e363508627907237daa76; path=/; secure; httponly; samesite=none

@@ -1,4 +1,5 @@
 class ShelvingsController < ApplicationController
+before_action :authenticate_user 
 
   def create 
     @shelving = Shelving.new(
@@ -19,5 +20,5 @@ class ShelvingsController < ApplicationController
     shelving.destroy
     render json: { message: "Book removed from shelf" }
   end
-  
+   
 end
