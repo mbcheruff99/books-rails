@@ -12,7 +12,7 @@ class UsersController < ApplicationController
       render json: { message: "User successfully created!" }, status: :created
       pp user
     else
-      render json: { errors: user.errors.full_messages }, status: :bad_request
+      render json: { errors: user.errors.full_messages }, status: :unprocessable_entity
     end
   end
   

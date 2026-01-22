@@ -30,7 +30,7 @@ class BooksController < ApplicationController
     )
     if @book.save
       render :show
-    else render json: { message: @book.errors.full_messages }, status: :bad_request
+    else render json: { message: @book.errors.full_messages }, status: :unprocessable_entity
     end
   end
 

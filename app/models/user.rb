@@ -5,7 +5,7 @@ class User < ApplicationRecord
   
   has_secure_password
   validates :email, presence: true, uniqueness: true
-  validates :password, presense: true # same as passwors_confirmation!!!
+  validates :password, presence: true # same as passwors_confirmation!!!
 
   after_create :create_default_shelves
 

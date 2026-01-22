@@ -16,5 +16,9 @@ Rails.application.routes.draw do
   post "/books" => "books#create"
   patch "/books/:id" => "books#update"
   delete "/books/:id" => "books#destroy"
+
+  # Shelvings
+  post "/shelvings" => "shelvings#create"
+  delete "/shelvings/:id" => "shelving#destroy"
   
 end
