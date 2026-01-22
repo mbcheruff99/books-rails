@@ -4,6 +4,7 @@
 - tests for crud?
 - genres into tags, remove from Book table (slack dump zipfile) (maybe not and uise search somehow?)
 - add genres into search
+- password is same as confirmation
 
 
     EVENTUALLY
