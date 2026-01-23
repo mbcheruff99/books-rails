@@ -4,6 +4,7 @@ class ShelvesController < ApplicationController
 
   def index 
     @shelves = current_user.shelves
+    pp current_user
     render :index
   end
 

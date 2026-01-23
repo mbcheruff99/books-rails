@@ -13,7 +13,7 @@ class User < ApplicationRecord
 
   def create_default_shelves
     %w[Want_to_Read Currently_Reading Read].each do |name|
-      shelves.create!(name: name, default: true)
+      shelves.create!(name: name)
     end
   end
 

@@ -20,8 +20,8 @@ class SessionsController < ApplicationController
   private
 
   def cookie_settings
-    if Rails.env.test?
-      { httponly: true }
+    if Rails.env.production?
+      { httponly: true, secure: true, same_site: :none }
     else
       { httponly: true, secure: true, same_site: "None" }
     end
