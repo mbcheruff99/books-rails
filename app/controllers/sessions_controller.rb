@@ -1,5 +1,13 @@
 class SessionsController < ApplicationController
 
+  def show
+    if current_user
+      render json: { id: current_user.id, name: current_user.name, email: current_user.email}
+    else 
+      render json: { user: nil}, status: :unauthorized
+    end
+  end
+  
   def create
     user = User.find_by(email: params[:email])
     if user && user.authenticate(params[:password])
