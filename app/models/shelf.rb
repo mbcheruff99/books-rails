@@ -4,6 +4,6 @@ class Shelf < ApplicationRecord
   has_many :users, through: :shelvings
   has_many :books, through: :shelvings
 
-  validates :name, uniqueness: { scope: :user_id }
+  validates :name, presence: true, uniqueness: { scope: :user_id }
   
 end
