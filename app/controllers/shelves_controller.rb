@@ -5,18 +5,13 @@ class ShelvesController < ApplicationController
 
   def index 
     @shelves = current_user.shelves.includes(:books)
-    render :index
+    render :index 
   end
 
   def create
     normalized_name = params[:name].to_s.strip.downcase.gsub(/\s+/, "_")
 
     @shelf = current_user.shelves.new(name: normalized_name)
-
-    # @shelf = Shelf.new(
-    #   name: params[:name],
-    #   user_id: current_user.id
-    # )
 
     if @shelf.save
       render :show, status: :created
