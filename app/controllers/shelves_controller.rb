@@ -4,7 +4,7 @@ class ShelvesController < ApplicationController
 
 
   def index 
-    @shelves = current_user.shelves
+    @shelves = current_user.shelves.includes(:books)
     render :index
   end
 

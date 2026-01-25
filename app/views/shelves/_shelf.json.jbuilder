@@ -1,4 +1,4 @@
-json.shelf_id shelf.id
+json.id shelf.id
 json.name shelf.name
 
 json.user do
