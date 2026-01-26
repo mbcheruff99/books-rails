@@ -31,7 +31,22 @@ before_action :authenticate_user
 
 
   def destroy
-    shelving = Shelving.find(params[:id])
+    book_id = params[:id]
+    shelf_id = params[:shelf_id]
+    
+    shelving = Shelving.find_by(book_id: book_id, shelf_id: shelf_id)
+    
+    unless shelving
+      render json: { errors: ["Shelving not found"] }, status: :not_found
+      return
+    end
+    
+    # Verify the shelf belongs to the current user
+    unless shelving.shelf.user == current_user
+      render json: { errors: ["Not authorized"] }, status: :forbidden
+      return
+    end
+    
     shelving.destroy
     render json: { message: "Book removed from shelf" }
   end

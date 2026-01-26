@@ -19,7 +19,7 @@ Rails.application.routes.draw do
 
   # Shelvings
   post "/shelvings" => "shelvings#create"
-  delete "/shelvings/:id" => "shelving#destroy"
+  delete "/shelvings/:id" => "shelvings#destroy"
 
   # Shelves
   get "/shelves" => "shelves#index"
