@@ -5,6 +5,13 @@ before_action :authenticate_user
     shelf_id = params[:shelf_id]
     book_id = params[:book_id]
 
+    existing_shelving = Shelving.find_by(shelf_id: shelf_id, book_id: book_id)
+
+    if existing_shelving
+      render json: { message: "Book already on this shelf", shelving: existing_shelving }, status: :ok
+      return
+    end
+
     @shelving = Shelving.new(
       shelf_id: shelf_id,
       book_id: book_id

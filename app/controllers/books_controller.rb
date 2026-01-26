@@ -2,18 +2,19 @@ class BooksController < ApplicationController
   before_action :authenticate_admin, except: [ :index, :show ]
 
 
-  def index
-    if params[:q].present?
-      query = "%#{params[:q]}%"
-      @books = Book.where("title ILIKE ? OR author ILIKE ?", query, query)
-      render :index
-    else
-      @books = Book.all
+  
+    def index
+      if params[:q].present?
+        q = "%#{params[:q]}%"
+        @books = Book.where("title ILIKE :q OR author ILIKE :q OR genres @> ARRAY[:exact]::varchar[]", q: q, exact: params[:q])
+      else
+        @books = Book.all
+      end
+
       render :index
     end
-  end
-  
-  
+
+
   def show
     @book = Book.find(params[:id])
     render :show
