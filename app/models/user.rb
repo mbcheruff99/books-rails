@@ -2,10 +2,11 @@ class User < ApplicationRecord
   has_many :shelves, dependent: :destroy
   has_many :shelvings, dependent: :destroy
   has_many :books, through: :shelvings
-  
+
   has_secure_password
   validates :email, presence: true, uniqueness: true
-  validates :password, presence: true # same as password_confirmation!!!
+  validates :password, presence: true 
+  validates :password_confirmation, presence: true 
 
   after_create :create_default_shelves
 

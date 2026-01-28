@@ -1,7 +1,5 @@
 Rails.application.routes.draw do
-
   get "up" => "rails/health#show", as: :rails_health_check
-
 
   # Users
   post "/users" => "users#create"
@@ -25,5 +23,4 @@ Rails.application.routes.draw do
   get "/shelves" => "shelves#index"
   post "/shelves" => "shelves#create"
   delete "/shelves/:id" => "shelves#destroy"
-  
 end

@@ -7,4 +7,3 @@ json.books shelf.books do |book|
   json.author book.author
   json.cover book.cover
 end
-

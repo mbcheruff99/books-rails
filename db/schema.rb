@@ -1,5 +1,4 @@
 ActiveRecord::Schema[8.1].define(version: 2026_01_22_005425) do
-  # These are extensions that must be enabled in order to support this database
   enable_extension "pg_catalog.plpgsql"
 
   create_table "books", force: :cascade do |t|

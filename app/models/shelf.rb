@@ -5,5 +5,4 @@ class Shelf < ApplicationRecord
   has_many :books, through: :shelvings
 
   validates :name, presence: true, uniqueness: { scope: :user_id }
-  
 end

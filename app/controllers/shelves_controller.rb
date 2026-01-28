@@ -1,9 +1,9 @@
 class ShelvesController < ApplicationController
   before_action :authenticate_user 
-  before_action :set_shelf, only: [:destroy]
+  before_action :set_shelf, only: [ :destroy ]
 
 
-  def index 
+  def index
     @shelves = current_user.shelves.includes(:books)
     render :index 
   end
@@ -29,7 +29,7 @@ class ShelvesController < ApplicationController
     @shelf.destroy
     render json: { message: "Shelf successfully deleted" }, status: :ok
   end
-  
+
 
   private
 
@@ -39,4 +39,3 @@ class ShelvesController < ApplicationController
     render json: { errors: ["Shelf not found"] }, status: :not_found
   end
 end
-
